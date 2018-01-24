@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kate's Website</title>
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,600" rel="stylesheet">
+        <style>
+            body {
+                background: rgb(255, 255, 255);
+                color: rgb(45, 45, 45);
+                padding: 0px;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            [id=all-contents] {
+                max-width: 900px;
+                margin: auto;
+                font-family: 'Vollkorn', serif;
+                padding: 10px;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(241, 241, 241);
+                margin: 0 auto;
+                margin-bottom: 20px;
+                display: flex;
+                padding: 20px;
+                color: rgb(45, 45, 45);
+                border-radius: 2px;
+                border: 1px solid rgb(45, 45, 45);
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                font-weight: bold;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: rgb(45,45,45);
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(241, 241, 241);
+                display: flex;
+                padding: 50px;
+            }
+            [class=sidebar] {
+                margin-right: 25px;
+                padding: 30px;
+            }
+            [class=sidebar] img {
+                width: 200px;
+                box-shadow: -2px 5px 20px rgb(45, 45, 45);
+            }
+            [class=content] {
+                flex: 1;
+                padding: 15px;
+            }
+            [class=interests] header {
+                font-size: 1.25em;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>Kate Marsh's Website</header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                    <img src="http://cdn.giraffeworlds.com/wp-content/uploads/Beautiful_Masai_Giraffe_Posing_600.jpg">
+                </div>
+                <div class="content">
+                    <header>Kate Marsh is a...</header>
+                    <p>Student at Ben Franklin High School</p>
+                    <section class="interests">
+                        <header>Things I Do...</header>
+                        <ul>
+                            <li>soccer</li>
+                            <li>school</li>
+                            <li>work at Plum Street Snoballs</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

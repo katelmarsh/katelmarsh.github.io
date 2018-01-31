@@ -1,0 +1,108 @@
+    
+    body {
+        background: rgb(255, 255, 255);
+        color: rgb(45, 45, 45);
+        padding: 0px;
+    }
+    
+    header {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    
+    .all-contents {
+        max-width: 900px;
+        margin: auto;
+        font-family: 'Vollkorn', serif;
+        padding: 10px;
+    }
+    
+    /* navigation menu */
+    nav {
+        background: rgb(241, 241, 241);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 20px;
+        border-radius: 2px;
+        border-bottom: 2px solid lightblue;
+    }
+    
+    nav header {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-weight: bold;
+        color: rgb(45, 45, 45);
+    }
+    
+    nav ul {
+        list-style-image: none;
+    }
+    
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+        color: lightblue;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: rgb(45,45,45);
+    }
+    
+    /* main container area beneath menu */
+    main {
+        background: rgb(241, 241, 241);
+        display: flex;
+        padding: 50px;
+        border-radius: 2px;
+        border-bottom: 2px solid lightblue;
+    }
+    
+    .sidebar {
+        margin-right: 25px;
+        padding: 30px;
+    }
+    
+    .sidebar img {
+        max-width: none;
+        width: 200px;
+        box-shadow: -2px 5px 20px rgb(45, 45, 45);
+    }
+    
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    
+    .interests header {
+        font-size: 1.25em;
+    }
+    
+    /* portfolio styles */
+    #portfolio {
+        list-style-type: none;
+        padding-left: 0;
+    }
+            
+    #portfolio li {
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+            
+    #portfolio li:hover {
+        background: #eee;
+    } 
+            
+    #portfolio a {
+        text-decoration: none;
+        color: #454545;
+    }

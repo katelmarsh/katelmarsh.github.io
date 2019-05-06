@@ -338,13 +338,10 @@ _.reject = function(collection, func) {
 *   }); -> [[2,4],[1,3,5]]
 }
 */
-_.partition = function(obj, func) {
-    var pass = [];
-    var fail = [];
-    _.each(obj, function(value, key, obj) {
-      (func(value, key, obj) ? pass : fail).push(value);
-    });
-    return [pass, fail];
+_.partition = function(array, func) {
+    var filtered = _.filter(array, func); 
+    var rejected = _.reject(array, func); 
+    return [filtered, rejected];
   };
 
 
@@ -424,9 +421,27 @@ _.every = function(collection, func) {
 *   _.some([1,2,3], function(e){return e % 2 === 0}) -> true
 */
 
-_.some = function(collection, func) {
-    if(_.typeOf(collection) === 'Array'){
-        _.filter(_.each(collection,func));
+_.some = function(collection, test) {
+    if(!test){
+        // insert loop here
+        for(var i = 0; i < collection.length; i++){
+            if (collection[i]) {
+                return true;
+            }
+              return false;
+        }
+    }
+    var toReturn = false;
+     _.every(collection, function(value, loc, collection){
+            var result = test(value, loc, collection);
+            if(result === true){
+                toReturn = true;
+            }
+        });
+        return toReturn;
+}
+    /*if(_.typeOf(collection) === 'Array'){
+       
     } else if(_.typeOf(collection) === 'Object'){
         _.filter(_.each(collection,func));
     }
@@ -441,7 +456,9 @@ _.some = function(collection, func) {
         }
     }
     return false;
+    *\
   };
+  
  
 
 /** _.pluck
@@ -454,10 +471,16 @@ _.some = function(collection, func) {
 * Examples:
 *   _.pluck([{a: "one"}, {a: "two"}], "a") -> ["one", "two"]
 */
-_.pluck = function(obj, key) {
-    let property = obj == null ? 0 : obj[key];
-    return _.map(obj, property);
-  };
+_.pluck = function(collection, key) {
+    if (collection !== (undefined || null)){
+        
+        return _.map(collection, function(obj) {
+            var property = obj[key];`            `
+            return property;
+        });
+        
+    }
+}
 
 
 //////////////////////////////////////////////////////////////////////
